@@ -2,6 +2,7 @@ package com.example.nutricount;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,24 +40,30 @@ public class MainActivity2 extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String username1 = username.getText().toString();
+                String pass1 = pass.getText().toString();
+                String email1 = email.getText().toString();
+                String conpass = confirmpass.getText().toString();
 
-                    if(username==null || email==null ||pass==null || confirmpass==null) {
-                        Toast.makeText(MainActivity2.this, "INVALID ACCOUNT", Toast.LENGTH_SHORT).show();
-                    }
-
-                    else{
-                        Toast.makeText(MainActivity2.this, "REGISTERED SUCCESFULLY", Toast.LENGTH_SHORT).show();
-
-                        dbConnection db = new dbConnection(MainActivity2.this);
-                        String u = username.getText().toString();
-                        String e = email.getText().toString();
-                        String p = pass.getText().toString();
-                        db.addUser(u,e,p);
-                    }
-
-
-
+                if (TextUtils.isEmpty(username1) || TextUtils.isEmpty(email1) || TextUtils.isEmpty(pass1) || TextUtils.isEmpty(conpass)) {
+                    Toast.makeText(MainActivity2.this, "INVALID ACCOUNT: All fields must be filled", Toast.LENGTH_SHORT).show();
+                }
+                else if (!pass1.equals(conpass)) {
+                    Toast.makeText(MainActivity2.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                }else if(!isPasswordValid(pass1)){
+                    Toast.makeText(MainActivity2.this, "Password must contain at least one special character, one number, and one uppercase letter", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(MainActivity2.this, "REGISTERED SUCCESSFULLY", Toast.LENGTH_SHORT).show();
+                    dbConnection db = new dbConnection(MainActivity2.this);
+                    db.addUser(username1, email1, pass1);
+                }
             }
+            public boolean isPasswordValid(String password) {
+                String regex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?\":{}|<>]).+$";
+                return password.matches(regex);
+            }
+
         });
 
         btnLogIn.setOnClickListener(new View.OnClickListener() {

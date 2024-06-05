@@ -71,7 +71,7 @@
                 android:id="@+id/pass"
                 android:layout_width="248dp"
                 android:layout_height="46dp"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:layout_gravity="center"
                 android:hint="password"/>
 
@@ -79,7 +79,7 @@
 
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/login"
             android:layout_width="113dp"
             android:layout_height="49dp"
             android:layout_gravity="center"
@@ -88,6 +88,17 @@
             android:text="LOGIN"
             android:textSize="16sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:backgroundTint="#230B41"
+            android:text="SIGN UP"
+            android:textSize="16sp" />
     </LinearLayout>
 
 </RelativeLayout>
