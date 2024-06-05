@@ -11,116 +11,115 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="70dp"
+            android:layout_gravity="center"
             android:layout_width="246dp"
             android:layout_height="157dp"
             android:scaleType="center"
             app:srcCompat="@drawable/logo" />
 
         <TextView
-            android:id="@+id/createAcc"
             android:layout_width="wrap_content"
-            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
             android:layout_height="40dp"
             android:text="Create new account"
             android:textColor="#230B41"
             android:textSize="30dp" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_marginLeft="80dp"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Already registered?"
                 android:textSize="20dp" />
 
-            <TextView
+            <Button
                 android:id="@+id/btnlogin"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Log In"
-                android:textColorLink="#230B41" />
+                android:textColor="@color/black"
+                android:background="@android:color/transparent"
+                />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="72dp"
                 android:layout_height="66dp"
-                android:layout_marginStart="39dp"
-                android:layout_marginEnd="1dp"
+                android:layout_gravity="center"
                 app:srcCompat="@drawable/a" />
 
             <EditText
                 android:id="@+id/username"
                 android:layout_width="250dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:ems="10"
+                android:layout_gravity="center"
                 android:hint="username"
                 android:inputType="text" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="72dp"
                 android:layout_height="65dp"
-                android:layout_marginStart="39dp"
+                android:layout_gravity="center"
                 app:srcCompat="@drawable/c" />
 
             <EditText
                 android:id="@+id/email"
                 android:layout_width="249dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:ems="10"
+                android:layout_gravity="center"
                 android:hint="email"
                 android:inputType="text" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="72dp"
                 android:layout_height="61dp"
-                android:layout_marginStart="39dp"
+                android:layout_gravity="center"
                 app:srcCompat="@drawable/b" />
 
             <EditText
                 android:id="@+id/pass"
                 android:layout_width="248dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="52dp"
+                android:layout_gravity="center"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="text" />
@@ -129,21 +128,21 @@
 
         <EditText
             android:id="@+id/confrm"
+            android:layout_gravity="center"
             android:layout_width="248dp"
             android:layout_height="48dp"
-            android:layout_marginLeft="108dp"
-            android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="COnfirm Pass"
+            android:layout_marginLeft="31dp"
+            android:hint="Confirm Pass"
             android:inputType="text" />
 
         <Button
             android:id="@+id/btnsignup"
             android:layout_width="119dp"
             android:layout_height="48dp"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="50dp"
-            android:text="SIGN UP" />
+            android:layout_gravity="center"
+            android:text="SIGN UP"
+            android:layout_marginTop="50dp"/>
 
     </LinearLayout>
 
